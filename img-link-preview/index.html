@@ -22,7 +22,7 @@
         }
 
         .app {
-            max-width: 1100px;
+            max-width: 1400px;
             width: 100%;
         }
 
@@ -721,7 +721,7 @@
         function extractImageUrls(text) {
             // 匹配 https:// 开头，常见图片扩展名结尾 (忽略大小写)
             // 允许查询参数 ?... 和锚点 #...
-            const regex = /https?:\/\/[^\s<>"']+?\.(?:jpg|jpeg|png|gif|webp|bmp|svg|tiff?|ico|avif|heic|heif)(?:\?[^\s<>"']*)?(?:#[^\s<>"']*)?/gi;
+            const regex = /https?:\/\/[^\s<>"']+?\.(?:jpg|jpeg|png|gif|webp|bmp|tiff?|ico|avif|heic|heif)(?:\?[^\s<>"']*)?(?:#[^\s<>"']*)?/gi;
             const matches = text.match(regex);
             if (!matches) return [];
             // 去重 (保留首次出现顺序)
